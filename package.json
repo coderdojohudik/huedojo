@@ -1,0 +1,11 @@
+{
+  "name": "huedojo",
+  "version": "0.0.1",
+  "description": "Demo of Philips Hue for CoderDojo Hudiksvall",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ojna",
+  "private": "true"
+}
