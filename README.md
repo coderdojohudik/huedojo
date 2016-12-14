@@ -12,3 +12,4 @@ CLI för att styra lampor från Philips.
 - Fungerande meny
 - Dela upp i moduler
 - Webbserver med controller
+- Testa och uppdatera till en senare version av node.js
