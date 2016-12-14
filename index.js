@@ -1,3 +1,4 @@
+var config = require('dotenv').config();
 var hue = require("node-hue-api");
 
 var displayResult = function(bridge) {
@@ -10,9 +11,9 @@ var displayError = function(err) {
 };
 
 
-var hostname = "192.168.1.51"
-,   username = "2a2583fc299db78fc7ae9d426367707"
-,   userDescription = "HueDojo"
+var hostname = config.HOSTNAME
+,   username = config.USERNAME
+,   userDescription = config.USER_DESCRIPTION
 ,   api;
 
 api = new hue.HueApi(hostname, username);
@@ -33,6 +34,8 @@ if(false){
 
     // description
     api.description().then(displayResult).done();
+
+    // get full state
+    api.getFullState().then(displayResult).done();
 }
 
-api.getFullState().then(displayResult).done();
