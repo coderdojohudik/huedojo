@@ -1,5 +1,8 @@
+var argv = require('minimist')(process.argv.slice(2));
 var config = require('dotenv').config();
 var hue = require("node-hue-api");
+
+console.log(argv);
 
 var displayResult = function(bridge) {
     console.log(JSON.stringify(bridge, null, 2));
